@@ -102,7 +102,7 @@ export default function Form(props) {
         if (submitedFormRes === 201) {
             router.push('zahtjev-poslan');
         }
-    }, [mainData, serviceIds, router])
+    }, [mainData, serviceIds, router, validCupon])
 
     const checkboxChange = domObj => {
         const checkboxObj = {
@@ -291,17 +291,6 @@ export default function Form(props) {
                             {preview ? 'Pošalji' : 'Dalje'}
                         </button>
                     </div>
-                    {/* {isInvalid && (
-                            <div className="absolute right-[0px] top-[-2px] px-2 text-red-500 bg-red-100 rounded-md">
-                                {inputErrors.error.message}
-                            </div>
-                        )}
-                        <button
-                            type="button"
-                            onClick={() => {
-                                setError("name", { type: "focus" }, { shouldFocus: true })
-                            }}
-                        >kdkdkdk</button> */}
                 </form>
             </FormProvider>
         </div>
